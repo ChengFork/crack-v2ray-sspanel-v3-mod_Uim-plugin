@@ -202,15 +202,18 @@ installSoftware(){
 
 # return 1: not apt, yum, or zypper
 getPMT(){
-    if [[ -n `command -v apt-get` ]];then
+    if [[ -n `which apt-get` ]];then
         CMD_INSTALL="apt-get -y -qq install"
         CMD_UPDATE="apt-get -qq update"
-    elif [[ -n `command -v yum` ]]; then
+    elif [[ -n `which yum` ]]; then
         CMD_INSTALL="yum -y -q install"
         CMD_UPDATE="yum -q makecache"
-    elif [[ -n `command -v zypper` ]]; then
+    elif [[ -n `which zypper` ]]; then
         CMD_INSTALL="zypper -y install"
         CMD_UPDATE="zypper ref"
+    elif [[ -n `which apk` ]]; then
+        CMD_INSTALL="apk --no-cache add"
+        CMD_UPDATE="apk update"
     else
         return 1
     fi
