@@ -211,10 +211,6 @@ getPMT(){
     elif [[ -n `which zypper` ]]; then
         CMD_INSTALL="zypper -y install"
         CMD_UPDATE="zypper ref"
-    elif [[ -n `which apk` ]]; then
-        CMD_INSTALL="apk --no-cache add"
-        CMD_UPDATE="apk update"
-    else
         return 1
     fi
     return 0
