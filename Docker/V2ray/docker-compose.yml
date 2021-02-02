@@ -9,6 +9,7 @@ services:
       sspanel_url: "https://xxxx"
       key: "xxxx"
       speedtest: 6
+      checkrate: 60
       node_id: 10
       api_port: 2333
       downWithPanel: 1
