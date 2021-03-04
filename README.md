@@ -8,13 +8,13 @@ Malio SSPANEL主题 + V2Ray后端，原价1000，现在只需899（V2ray 是按�
 ## 普通安装
 ### 后端安装
 ``` bash
-bash <(curl -L -s  https://raw.githubusercontent.com/MeowCheng/crack-v2ray-sspanel-v3-mod_Uim-plugin/master/install-release.sh) \
+bash <(curl -L -s  https://raw.githubusercontent.com/ChengFork/crack-v2ray-sspanel-v3-mod_Uim-plugin/master/install-release.sh) \
 --panelurl http://webapi.com --panelkey webkey --nodeid 2 \
 --downwithpanel 1 --speedtestrate 6 --paneltype 0 --usemysql 0 --cfemail mail --cfkey xxx
 ```
 ### caddy安装
 ``` bash
-bash <(curl -L -s https://raw.githubusercontent.com/MeowCheng/crack-v2ray-sspanel-v3-mod_Uim-plugin/master/install_caddy.sh) node.com xxx@gmail.com https://fakeurl.com v2ray 10550
+bash <(curl -L -s https://raw.githubusercontent.com/ChengFork/crack-v2ray-sspanel-v3-mod_Uim-plugin/master/install_caddy.sh) node.com xxx@gmail.com https://fakeurl.com v2ray 10550
 ```
 建议您使用性能稍高一些的Nginx进行转发，只把ws端口暴露在本机管理起来也更加方便(相关文档会在日后编写)
 ## Docker
